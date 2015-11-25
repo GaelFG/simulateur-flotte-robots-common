@@ -1,12 +1,2 @@
-*.class
-bin/
-build/
-.mtj.tmp/
-*.jar
-*.war
-*.ear
-hs_err_pid*
-.gradle/
-.settings/
-
-/common/.settings/*
+/target/
+.settings
