@@ -1,4 +1,4 @@
-package Models;
+package fr.univ.tlse2.sfr.communication;
 
 import java.util.LinkedList;
 
@@ -8,7 +8,7 @@ public class EtatSimulation {
 	
 	public EtatSimulation(){
 		this.carte = new EtatCarte();
-		this.liste_robots = new LinkedList<>();
+		this.liste_robots = new LinkedList<EtatRobot>();
 	}
 	
 	public EtatSimulation(EtatCarte p_carte){

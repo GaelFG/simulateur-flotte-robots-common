@@ -1,4 +1,4 @@
-package Models;
+package fr.univ.tlse2.sfr.communication;
 
 public class EtatRobot {
 
