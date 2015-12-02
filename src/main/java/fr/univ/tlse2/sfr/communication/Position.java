@@ -1,6 +1,6 @@
 package fr.univ.tlse2.sfr.communication;
 /**
- * <b>Classe Position permettant de donner les coordonnées d'un robot sur une carte</b>
+ * <b>Classe Position permettant de donner les coordonnées d'un EtatRobot sur une carte</b>
  * <p>Une position est caractérisée par :
  * <ul>
  * <li>Une coordonnée en abscisse x </li>
@@ -63,24 +63,47 @@ public class Position {
 	 * @param ordonnee
 	 * 			Une coordonnée y
 	 * @see Position#x
+	 * @see Position#y
 	 */
 	public Position(double abscisse, double ordonnee){
 		this.x = abscisse;
 		this.y = ordonnee;
 	}
 
+	/**
+	 * Retourne l'asbcisse d'une position
+	 * 
+	 * @return l'abscisse d'une position
+	 */
 	public double get_x() {
 		return x;
 	}
 
+	/**
+	 * Permet de modifier l'asbcisse d'une position en passant une abscisse en paramètre d'entrée
+	 * @param x
+	 * 		Une coordonnée x
+	 * @see Position#x
+	 */
 	public void set_x(double x) {
 		this.x = x;
 	}
 
+	/**
+	 * Retourne l'ordonnée d'une position
+	 * 
+	 * @return L'ordonnée d'une position
+	 */
 	public double get_y() {
 		return y;
 	}
 
+	/**
+	 * Permet de modifier l'ordonnée d'une position en passant une ordonnée en paramètre d'entrée
+	 * 
+	 * @param y
+	 * 		Une ordonnée y
+	 */
 	public void set_y(double y) {
 		this.y = y;
 	}
