@@ -148,6 +148,7 @@ public class EtatSimulation {
 		return liste_robots;
 	}
 	
+	/*
 	public static void main(String[] args){
 		int mode = 1;
 		
@@ -187,7 +188,7 @@ public class EtatSimulation {
 		simu.getListe_robots().get(0).set_orientation_robot(1);
 		
 		System.out.println("Robot 1 : " + simu.getListe_robots().get(0).get_id_robot() + ", orientation : " + simu.getListe_robots().get(0).get_orientation_robot());		
-
 	}
+	*/
 	
 }
