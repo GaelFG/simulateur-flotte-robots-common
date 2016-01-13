@@ -1,7 +1,5 @@
 package fr.univ.tlse2.sfr.communication;
 
-import javax.management.RuntimeErrorException;
-
 /**
  * Demande le lancement d'une simulation au serveur.
  * Comme toutes les classes à sérialiser avec Kryo, il faut que tous les attributs soient publics 

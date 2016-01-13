@@ -86,7 +86,7 @@ public class EtatSimulation {
 	 * @see EtatSimulation#liste_robots
 	 */
 	public EtatSimulation(EtatCarte p_carte, LinkedList<EtatRobot> p_liste_robots){
-		this.carte = new EtatCarte(p_carte.getNom_carte(),p_carte.getLargeur(),p_carte.getHauteur());
+		this.carte = p_carte;
 		this.liste_robots = p_liste_robots;
 	}
 	
