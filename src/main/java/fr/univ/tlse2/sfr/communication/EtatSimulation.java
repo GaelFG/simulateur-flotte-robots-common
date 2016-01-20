@@ -25,7 +25,7 @@ public class EtatSimulation {
 	 * @see EtatSimulation#getCarte()
 	 * @see EtatSimulation#setCarte(EtatCarte)
 	 */
-	private EtatCarte carte;
+	public EtatCarte carte;
 	
 	/**
 	 * La liste de tous les robots utilisés dans la simulation
@@ -39,7 +39,7 @@ public class EtatSimulation {
 	 * @see EtatSimulation#ajouter_robots(EtatRobot)
 	 * @see EtatSimulation#supprimer_robot(EtatRobot)
 	 */
-	private LinkedList<EtatRobot> liste_robots;
+	public LinkedList<EtatRobot> liste_robots;
 	
 	/**
 	 * Constructeur d'un EtatSimulation sans paramètres en entrée
@@ -70,7 +70,7 @@ public class EtatSimulation {
 	 */
 	public EtatSimulation(EtatCarte p_carte){
 		this.liste_robots = new LinkedList<EtatRobot>();
-		this.carte = new EtatCarte(p_carte.getNom_carte(),p_carte.getLargeur(),p_carte.getHauteur());
+		this.carte = new EtatCarte(p_carte.nom_carte,p_carte.largeur,p_carte.hauteur);
 	}
 	
 	/**
@@ -100,7 +100,7 @@ public class EtatSimulation {
 	 * @see EtatRobot
 	 */
 	public void ajouter_robots(EtatRobot robot){
-		this.getListe_robots().add(robot);
+		this.liste_robots.add(robot);
 	}
 	
 	/**
@@ -113,82 +113,7 @@ public class EtatSimulation {
 	 * @see EtatRobot
 	 */
 	public void supprimer_robot(EtatRobot robot){
-		this.getListe_robots().remove(robot);
+		this.liste_robots.remove(robot);
 	}
-
-	/**
-	 * Retourne l'EtatCarte de l'EtatSimulation
-	 * @return L'EtatCarte de l'EtatSimulation
-	 */
-	public EtatCarte getCarte() {
-		return carte;
-	}
-
-	/**
-	 * Permet de modifier l'EtatCarte de l'EtatSimulation en lui spécifiant un EtatCarte
-	 * @param carte
-	 * 		Nouvel EtatCarte à modifier
-	 * 
-	 * 
-	 * @see EtatCarte
-	 * @see EtatSimulation#carte
-	 */
-	public void setCarte(EtatCarte carte) {
-		this.carte = carte; // modification de la carte à revoir
-	}
-
-	/**
-	 * Retourne la LinkedList des EtatRobots de l'EtatSimulation
-	 * @return La LinkedList des EtatRobots de l'EtatSimulation
-	 * 
-	 * @see EtatRobot
-	 * @see EtatSimulation#liste_robots
-	 */
-	public LinkedList<EtatRobot> getListe_robots() {
-		return liste_robots;
-	}
-	
-	/*
-	public static void main(String[] args){
-		int mode = 1;
-		
-		if(mode == 1){
-			EtatSimulation.tester_avec_bouchon();
-		}
-	}
-	
-	public static void tester_avec_bouchon(){
-		EtatRobot robot1 = new EtatRobot(0, new Position(1.0, 1.0),0);
-		EtatRobot robot2 = new EtatRobot(1, new Position(2.0,2.0),0);
-		EtatRobot robot3 = new EtatRobot(2, new Position(3.0, 3.0),0);
-		
-		EtatCarte carte= new EtatCarte("Carte",10,10);
-		
-		LinkedList<EtatRobot> listRobots = new LinkedList<EtatRobot>();
-		
-		EtatSimulation simu = new EtatSimulation(carte, listRobots);
-		
-		simu.getListe_robots().add(robot1);
-		simu.getListe_robots().add(robot2);
-		simu.getListe_robots().add(robot3);
-
-		System.out.println("Changement de coordonnees d'un robot");
-		System.out.println("Robot 1 : " + simu.getListe_robots().get(0).get_id_robot() + ", pos : " + simu.getListe_robots().get(0).get_pos_robot().get_x() + ";"+ simu.getListe_robots().get(0).get_pos_robot().get_y());
-		
-		simu.getListe_robots().get(0).get_pos_robot().set_x(4.0);
-		simu.getListe_robots().get(0).get_pos_robot().set_y(4.0);
-		
-		
-		System.out.println("Robot 1 : " + simu.getListe_robots().get(0).get_id_robot() + ", pos : " + simu.getListe_robots().get(0).get_pos_robot().get_x() + ";"+ simu.getListe_robots().get(0).get_pos_robot().get_y());
-		
-		
-		System.out.println("Changement orientation d'un robot");
-		System.out.println("Robot 1 : " + simu.getListe_robots().get(0).get_id_robot() + ", orientation : " + simu.getListe_robots().get(0).get_orientation_robot());
-		
-		simu.getListe_robots().get(0).set_orientation_robot(1);
-		
-		System.out.println("Robot 1 : " + simu.getListe_robots().get(0).get_id_robot() + ", orientation : " + simu.getListe_robots().get(0).get_orientation_robot());		
-	}
-	*/
 	
 }

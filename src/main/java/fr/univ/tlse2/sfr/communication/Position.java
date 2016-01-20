@@ -19,7 +19,7 @@ public class Position {
 	 * @see Position#Position(Position)
 	 * @see Position#get_x()
 	 */
-	private double x;
+	public double x;
 	
 	/**
 	 * Coordonnée y de la position
@@ -28,7 +28,7 @@ public class Position {
 	 * @see Position#Position(Position)
 	 * @see Position#get_y()
 	 */
-	private double y;
+	public double y;
 	
 	/**
 	 * Constructeur de Position sans paramètres
@@ -50,8 +50,8 @@ public class Position {
 	 * 			Une position déjà existante
 	 */
 	public Position(Position pos){
-		this.x = pos.get_x();
-		this.y = pos.get_y();
+		this.x = pos.x;
+		this.y = pos.y;
 	}
 	
 	/**
@@ -68,43 +68,5 @@ public class Position {
 	public Position(double abscisse, double ordonnee){
 		this.x = abscisse;
 		this.y = ordonnee;
-	}
-
-	/**
-	 * Retourne l'asbcisse d'une position
-	 * 
-	 * @return l'abscisse d'une position
-	 */
-	public double get_x() {
-		return x;
-	}
-
-	/**
-	 * Permet de modifier l'asbcisse d'une position en passant une abscisse en paramètre d'entrée
-	 * @param x
-	 * 		Une coordonnée x
-	 * @see Position#x
-	 */
-	public void set_x(double x) {
-		this.x = x;
-	}
-
-	/**
-	 * Retourne l'ordonnée d'une position
-	 * 
-	 * @return L'ordonnée d'une position
-	 */
-	public double get_y() {
-		return y;
-	}
-
-	/**
-	 * Permet de modifier l'ordonnée d'une position en passant une ordonnée en paramètre d'entrée
-	 * 
-	 * @param y
-	 * 		Une ordonnée y
-	 */
-	public void set_y(double y) {
-		this.y = y;
 	}
 }

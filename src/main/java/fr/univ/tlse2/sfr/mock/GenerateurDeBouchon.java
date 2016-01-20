@@ -24,15 +24,15 @@ public class GenerateurDeBouchon {
 		
 		EtatSimulation simu = new EtatSimulation(carte, listRobots);
 		
-		simu.getListe_robots().add(robot1);
-		simu.getListe_robots().add(robot2);
-		simu.getListe_robots().add(robot3);
+		simu.liste_robots.add(robot1);
+		simu.liste_robots.add(robot2);
+		simu.liste_robots.add(robot3);
 
 		//System.out.println("Changement de coordonnees d'un robot");
 		//System.out.println("Robot 1 : " + simu.getListe_robots().get(0).get_id_robot() + ", pos : " + simu.getListe_robots().get(0).get_pos_robot().get_x() + ";"+ simu.getListe_robots().get(0).get_pos_robot().get_y());
 		
-		simu.getListe_robots().get(0).get_pos_robot().set_x(4.0);
-		simu.getListe_robots().get(0).get_pos_robot().set_y(4.0);
+		simu.liste_robots.get(0).pos_robot.x = 4.0;
+		simu.liste_robots.get(0).pos_robot.y = 4.0;
 		
 		
 		//System.out.println("Robot 1 : " + simu.getListe_robots().get(0).get_id_robot() + ", pos : " + simu.getListe_robots().get(0).get_pos_robot().get_x() + ";"+ simu.getListe_robots().get(0).get_pos_robot().get_y());
@@ -41,7 +41,7 @@ public class GenerateurDeBouchon {
 		//System.out.println("Changement orientation d'un robot");
 		//System.out.println("Robot 1 : " + simu.getListe_robots().get(0).get_id_robot() + ", orientation : " + simu.getListe_robots().get(0).get_orientation_robot());
 		
-		simu.getListe_robots().get(0).set_orientation_robot(1);
+		simu.liste_robots.get(0).orientation_robot = 1;
 		
 		//System.out.println("Robot 1 : " + simu.getListe_robots().get(0).get_id_robot() + ", orientation : " + simu.getListe_robots().get(0).get_orientation_robot());		
 
@@ -71,15 +71,15 @@ public class GenerateurDeBouchon {
 		
 		for(int i = 0; i < nb_tours ; i++){
 			System.out.println("======= TOUR " + (i+1) + " =======");
-			simu.getListe_robots().get(0).get_pos_robot().set_x(simu.getListe_robots().get(0).get_pos_robot().get_x()+1.0);
-			simu.getListe_robots().get(1).get_pos_robot().set_x(simu.getListe_robots().get(1).get_pos_robot().get_x()+1.0);
-			simu.getListe_robots().get(2).get_pos_robot().set_x(simu.getListe_robots().get(2).get_pos_robot().get_x()+1.0);
-			simu.getListe_robots().get(3).get_pos_robot().set_y(simu.getListe_robots().get(3).get_pos_robot().get_y()+1.0);
+			simu.liste_robots.get(0).pos_robot.x = simu.liste_robots.get(0).pos_robot.x+1.0;
+			simu.liste_robots.get(1).pos_robot.x = simu.liste_robots.get(1).pos_robot.x+1.0;
+			simu.liste_robots.get(2).pos_robot.x = simu.liste_robots.get(2).pos_robot.x+1.0;
+			simu.liste_robots.get(3).pos_robot.x = simu.liste_robots.get(3).pos_robot.x+1.0;
 			
-			System.out.println("Robot 1 : " + simu.getListe_robots().get(0).get_pos_robot().get_x() +" ; "+ simu.getListe_robots().get(0).get_pos_robot().get_y() );
-			System.out.println("Robot 2 : " + simu.getListe_robots().get(1).get_pos_robot().get_x() +" ; "+ simu.getListe_robots().get(1).get_pos_robot().get_y() );
-			System.out.println("Robot 3 : " + simu.getListe_robots().get(2).get_pos_robot().get_x() +" ; "+ simu.getListe_robots().get(2).get_pos_robot().get_y() );
-			System.out.println("Robot 4 : " + simu.getListe_robots().get(3).get_pos_robot().get_x() +" ; "+ simu.getListe_robots().get(3).get_pos_robot().get_y() );
+			System.out.println("Robot 1 : " + simu.liste_robots.get(0).pos_robot.x +" ; "+ simu.liste_robots.get(0).pos_robot.y);
+			System.out.println("Robot 2 : " + simu.liste_robots.get(1).pos_robot.x +" ; "+ simu.liste_robots.get(1).pos_robot.y);
+			System.out.println("Robot 3 : " + simu.liste_robots.get(2).pos_robot.x +" ; "+ simu.liste_robots.get(2).pos_robot.y);
+			System.out.println("Robot 4 : " + simu.liste_robots.get(3).pos_robot.x +" ; "+ simu.liste_robots.get(3).pos_robot.y);
 			
 			System.out.println("\n\n");
 			bouchon.add(simu);
