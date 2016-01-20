@@ -32,7 +32,7 @@ public class EtatCarte {
 	 * @see EtatCarte#getLargeur()
 	 * @see EtatCarte#setLargeur(int)
 	 */
-	private int largeur;
+	private double largeur;
 	
 	/**
 	 * Hauteur de l'EtatCarte
@@ -42,7 +42,7 @@ public class EtatCarte {
 	 * @see EtatCarte#getHauteur()
 	 * @see EtatCarte#setHauteur(int) 
 	 */
-	private int hauteur;
+	private double hauteur;
 	
 	/**
 	 * Constructeur d'un EtatCarte sans paramètres d'entrée
@@ -74,7 +74,7 @@ public class EtatCarte {
 	 * @see EtatCarte#largeur
 	 * @see EtatCarte#hauteur 
 	 */
-	public EtatCarte(String nom, int p_largeur, int p_hauteur){
+	public EtatCarte(String nom, double p_largeur, double p_hauteur){
 		this.nom_carte = nom;
 		this.largeur = p_largeur;
 		this.hauteur = p_hauteur;
@@ -104,7 +104,7 @@ public class EtatCarte {
 	 * @return La largeur de l'EtatCarte
 	 * 
 	 */
-	public int getLargeur() {
+	public double getLargeur() {
 		return largeur;
 	}
 
@@ -123,7 +123,7 @@ public class EtatCarte {
 	 * Retourne la hauteur de l'EtatCarte
 	 * @return La hauteur de l'EtatCarte
 	 */
-	public int getHauteur() {
+	public double getHauteur() {
 		return hauteur;
 	}
 
