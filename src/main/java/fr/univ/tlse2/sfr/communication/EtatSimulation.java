@@ -28,7 +28,7 @@ public class EtatSimulation {
 	public EtatCarte carte;
 	
 	/**
-	 * La liste de tous les robots utilisés dans la simulation
+	 * La liste de tous les robots utilisÃ©s dans la simulation
 	 * 
 	 * @see LinkedList
 	 * @see EtatRobot
@@ -42,8 +42,22 @@ public class EtatSimulation {
 	public LinkedList<EtatRobot> liste_robots;
 	
 	/**
-	 * Constructeur d'un EtatSimulation sans paramètres en entrée
-	 * <p>Lors de la création d'un EtatSimulation  sans paramètres, la carte est créée sans paramètres et la liste des robots est vide</p>
+	 * La liste de tous les obstacles utilisÃ©s dans la simulation
+	 * 
+	 * @see LinkedList
+	 * @see EtatObstacle
+	 * @see EtatSimulation#EtatSimulation()
+	 * @see EtatSimulation#EtatSimulation(EtatCarte)
+	 * @see EtatSimulation#EtatSimulation(EtatCarte, LinkedList)
+	 * @see EtatSimulation#getListe_obstacles()
+	 * @see EtatSimulation#ajouter_obstacle(EtatObstacle)
+	 * @see EtatSimulation#supprimer_obstacle(EtatObstacle)
+	 */
+	public LinkedList<EtatObstacle> liste_obstacles;
+	
+	/**
+	 * Constructeur d'un EtatSimulation sans paramÃ¨tres en entrÃ©e
+	 * <p>Lors de la crÃ©ation d'un EtatSimulation  sans paramÃ¨tres, la carte est crÃ©Ã©e sans paramÃ¨tres et la liste des robots est vide</p>
 	 * 
 	 * @see EtatCarte
 	 * @see EtatRobot
@@ -57,10 +71,10 @@ public class EtatSimulation {
 	}
 	
 	/**
-	 * Constructeur d'un EtatSimulation avec un EtatCarte en paramètre d'entrée
-	 * <p>Lors de la création d'un EtatSimulation avec un EtatCarte en paramètre, la liste des robots est vide et la carte est créée avec un EtatCarte en paramètre</p>
+	 * Constructeur d'un EtatSimulation avec un EtatCarte en paramÃ¨tre d'entrÃ©e
+	 * <p>Lors de la crÃ©ation d'un EtatSimulation avec un EtatCarte en paramÃ¨tre, la liste des robots est vide et la carte est crÃ©Ã©e avec un EtatCarte en paramÃ¨tre</p>
 	 * @param p_carte
-	 * 		EtatCarte à créer
+	 * 		EtatCarte Ã  crÃ©er
 	 * 
 	 * @see EtatCarte
 	 * @see EtatRobot
@@ -74,8 +88,8 @@ public class EtatSimulation {
 	}
 	
 	/**
-	 * Constructeur d'un EtatSimulation avec un EtatCarte et une LinkedList d'EtatRobots en paramètre
-	 * <p>Création d'un EtatSimulation avec un EtatCarte et une LinkedList d'EtatRobots en paramètre, construction de l'EtatCarte avec les attributs de l'Etatcarte passé en paramètre et Recopie de la LinkedList passée en paramètre </p>
+	 * Constructeur d'un EtatSimulation avec un EtatCarte et une LinkedList d'EtatRobots en paramÃ¨tre
+	 * <p>CrÃ©ation d'un EtatSimulation avec un EtatCarte et une LinkedList d'EtatRobots en paramÃ¨tre, construction de l'EtatCarte avec les attributs de l'Etatcarte passÃ© en paramÃ¨tre et Recopie de la LinkedList passÃ©e en paramÃ¨tre </p>
 	 * @param p_carte
 	 * @param p_liste_robots
 	 * 
@@ -91,9 +105,30 @@ public class EtatSimulation {
 	}
 	
 	/**
-	 * Permet d'ajouter des EtatRobots dans la LinkedList en lui faisant passer un EtatRobot en paramètre
+	 * Constructeur d'un EtatSimulation avec un EtatCarte, une LinkedList d'EtatRobots et une LinkedList d'EtatObstacle en paramÃ¨tre
+	 * <p>CrÃ©ation d'un EtatSimulation avec un EtatCarte, une LinkedList d'EtatRobots et une LinkedList d'EtatObstacle en paramÃ¨tre, construction de l'EtatCarte avec les attributs de l'Etatcarte passÃ© en paramÃ¨tre et Recopie de la LinkedList passÃ©e en paramÃ¨tre </p>
+	 * @param p_carte
+	 * @param p_liste_robots
+	 * @param p_liste_obstacles
+	 * 
+	 * @see EtatCarte
+	 * @see EtatRobot
+	 * @see EtatObstacle
+	 * @see LinkedList
+	 * @see EtatSimulation#carte
+	 * @see EtatSimulation#liste_robots
+	 * @see EtatSimulation#liste_obstacles
+	 */
+	public EtatSimulation(EtatCarte p_carte, LinkedList<EtatRobot> p_liste_robots, LinkedList<EtatObstacle> p_liste_obstacles){
+		this.carte = p_carte;
+		this.liste_robots = p_liste_robots;
+		this.liste_obstacles = p_liste_obstacles;
+	}
+	
+	/**
+	 * Permet d'ajouter des EtatRobots dans la LinkedList en lui faisant passer un EtatRobot en paramÃ¨tre
 	 * @param robot
-	 * 		Un nouveau EtatRobot à ajouter dans la LinkedList
+	 * 		Un nouveau EtatRobot Ã  ajouter dans la LinkedList
 	 * 
 	 * @see LinkedList
 	 * @see EtatSimulation#liste_robots
@@ -104,9 +139,9 @@ public class EtatSimulation {
 	}
 	
 	/**
-	 * Permet de supprimer un EtatRobot de la LinkedList en lui spécifiant un EtatRobot
+	 * Permet de supprimer un EtatRobot de la LinkedList en lui spÃ©cifiant un EtatRobot
 	 * @param robot
-	 * 		EtatRobot à supprimer de la LinkedList
+	 * 		EtatRobot Ã  supprimer de la LinkedList
 	 * 
 	 * @see LinkedList
 	 * @see EtatSimulation#liste_robots
