@@ -34,6 +34,7 @@ public final class EnregistreurKryo {
 			kryo.register(EtatSimulation.class);
 			kryo.register(Position.class);
 			kryo.register(java.util.LinkedList.class);
+			kryo.register(EtatObstacle.class);
 		}
 	}
 
