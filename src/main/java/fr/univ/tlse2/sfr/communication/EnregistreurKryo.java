@@ -28,6 +28,13 @@ public final class EnregistreurKryo {
 		} else {
 			liste_des_kryo_deja_traites.add(kryo);
 			kryo.register(DemarrerSimulation.class);
+			kryo.register(MessageTexte.class);
+			kryo.register(EtatCarte.class);
+			kryo.register(EtatRobot.class);
+			kryo.register(EtatSimulation.class);
+			kryo.register(Position.class);
+			kryo.register(java.util.LinkedList.class);
+			kryo.register(EtatObstacle.class);
 		}
 	}
 
