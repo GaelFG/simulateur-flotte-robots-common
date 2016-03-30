@@ -10,7 +10,7 @@ public class EtatObstacle {
 	}
 	
 	public EtatObstacle(int ptaille, Position pposition){
-		this.taille = 1;
+		this.taille = ptaille;
 		this.position_obstacle = pposition;
 	}
 }
