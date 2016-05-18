@@ -9,7 +9,7 @@ public class AjouterObstacle {
 	public Position position;
 	
 	public AjouterObstacle(){
-		System.err.println("Ajout de l'obstacle impossible, position non connue");
+		
 	}
 	
 	public AjouterObstacle(Position position){
