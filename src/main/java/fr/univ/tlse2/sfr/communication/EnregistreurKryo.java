@@ -36,6 +36,10 @@ public final class EnregistreurKryo {
 			kryo.register(java.util.LinkedList.class);
 			kryo.register(EtatObstacle.class);
 			kryo.register(ArreterSimulation.class);
+			kryo.register(ParametresSimulation.class);
+			kryo.register(PauseSimulation.class);
+			kryo.register(AjouterRobot.class);
+			kryo.register(AjouterObstacle.class);
 		}
 	}
 
