@@ -9,7 +9,7 @@ public class AjouterRobot {
 	public Position position;
 	
 	public AjouterRobot(){
-		System.err.println("Ajout du robot impossible, position non connue");
+		
 	}
 	
 	public AjouterRobot(Position position){
